@@ -1,0 +1,79 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .container {
+  background-color: rgb(42, 42, 42);
+  width: 70vw;
+  height: 90vh;
+}
+@media screen and (max-width: 1200px) {
+  body .container {
+    width: 80vw;
+  }
+}
+@media screen and (max-width: 500px) {
+  body .container {
+    width: 90vw;
+    height: 80vh;
+  }
+}
+body .container .wrapper {
+  height: 100%;
+  background-color: rgb(42, 42, 42);
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1.7;
+}
+body .container .wrapper > div:first-child {
+  display: grid;
+  place-content: center flex-end;
+  font-size: 2rem;
+  padding: 1rem;
+}
+body .container .wrapper > div {
+  flex-grow: 1;
+  display: flex;
+}
+body .container .wrapper > div:first-child {
+  flex-grow: 2;
+  color: white;
+  letter-spacing: 3px;
+}
+body .container .wrapper > div > div {
+  flex-basis: 25%;
+  border: 2px solid black;
+  display: grid;
+  place-content: center;
+  background: rgb(163, 163, 163);
+  cursor: pointer;
+  border-radius: 5px;
+}
+body .container .wrapper > div > div:not([class=function]):hover {
+  background-color: rgb(197, 197, 197);
+  transition: 0.5s;
+  transform: scale(1.03);
+}
+body .container .wrapper > div > div.function {
+  background-color: lightcoral;
+}
+body .container .wrapper > div > div.function:hover {
+  background-color: rgb(243, 184, 184);
+  transition: 0.5s;
+  transform: scale(1.03);
+}
+body .container .wrapper > div:last-child .btn-equals {
+  flex-basis: 50%;
+}
+
+/*# sourceMappingURL=index.css.map */

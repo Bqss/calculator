@@ -1,0 +1,100 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .container{
+
+        background-color: rgb(42, 42, 42);
+        width: 70vw;
+        height: 90vh;
+
+
+        @media screen and (max-width:1200px) {
+            width: 80vw;
+
+        }
+        @media screen and (max-width:500px) {
+            width: 90vw;
+            height:80vh;
+
+        }
+        
+        .wrapper{
+            height: 100%;
+            background-color: rgb(42, 42, 42);
+            display: flex;
+            flex-direction: column;
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 1.7;
+
+            & > div:first-child{
+                display: grid;
+                place-content: center flex-end;
+                font-size: 2rem;
+                padding: 1rem;
+            }
+
+            
+            & > div{
+
+              
+
+                flex-grow: 1;
+                display: flex;
+
+
+                &:first-child{
+                    flex-grow: 2;
+                    color: white;
+                    letter-spacing: 3px;
+                }
+
+                & > div {
+                    
+                    flex-basis: 25%;
+                    border: 2px solid black;
+                    display: grid;
+                    place-content:center;
+                    background : rgb(163, 163, 163);
+                    cursor: pointer;
+                    border-radius: 5px;
+                    &:not([class='function']):hover{
+                        background-color: rgb(197, 197, 197);
+                        transition: 0.5s;
+                        transform: scale(1.03);
+                    }
+                }
+
+                & > div.function{
+                    background-color: lightcoral;
+                    
+                    &:hover{
+                        background-color: rgb(243, 184, 184);
+                        transition: 0.5s;
+                        transform: scale(1.03);
+                    }
+                }
+
+                
+            }
+
+            & > div:last-child{
+                .btn-equals{
+                    flex-basis: 50%;
+                }
+            }
+        }
+
+        
+    }
+}
